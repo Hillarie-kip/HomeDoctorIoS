@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF43EEA724B454F700CFB126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF43EEA624B454F700CFB126 /* AppDelegate.swift */; };
+		AF43EEA924B454F700CFB126 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF43EEA824B454F700CFB126 /* SceneDelegate.swift */; };
+		AF43EEAB24B454F700CFB126 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF43EEAA24B454F700CFB126 /* LoginView.swift */; };
+		AF43EEAD24B454FC00CFB126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF43EEAC24B454FC00CFB126 /* Assets.xcassets */; };
+		AF43EEB024B454FC00CFB126 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF43EEAF24B454FC00CFB126 /* Preview Assets.xcassets */; };
+		AF43EEB324B454FC00CFB126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF43EEB124B454FC00CFB126 /* LaunchScreen.storyboard */; };
+		AF5D757A24B5C514005F9E7B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5D757924B5C514005F9E7B /* SplashView.swift */; };
+		AF5D758024B5DD74005F9E7B /* DoctorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5D757F24B5DD74005F9E7B /* DoctorView.swift */; };
+		AF5D758224B61EFD005F9E7B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5D758124B61EFD005F9E7B /* UserModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AF43EEA324B454F700CFB126 /* HomeDoctor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeDoctor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF43EEA624B454F700CFB126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF43EEA824B454F700CFB126 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AF43EEAA24B454F700CFB126 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AF43EEAC24B454FC00CFB126 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF43EEAF24B454FC00CFB126 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF43EEB224B454FC00CFB126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF43EEB424B454FC00CFB126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF5D757924B5C514005F9E7B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		AF5D757F24B5DD74005F9E7B /* DoctorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorView.swift; sourceTree = "<group>"; };
+		AF5D758124B61EFD005F9E7B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF43EEA024B454F700CFB126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF43EE9A24B454F700CFB126 = {
+			isa = PBXGroup;
+			children = (
+				AFD2B9BB24B4AF8400018521 /* common */,
+				AF43EEA524B454F700CFB126 /* HomeDoctor */,
+				AF43EEA424B454F700CFB126 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF43EEA424B454F700CFB126 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF43EEA324B454F700CFB126 /* HomeDoctor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF43EEA524B454F700CFB126 /* HomeDoctor */ = {
+			isa = PBXGroup;
+			children = (
+				AF5D757C24B5D054005F9E7B /* PatientUI */,
+				AF5D757B24B5D046005F9E7B /* DoctorUI */,
+				AFD2B9BC24B4AF9000018521 /* users */,
+				AF43EEA624B454F700CFB126 /* AppDelegate.swift */,
+				AF43EEA824B454F700CFB126 /* SceneDelegate.swift */,
+				AF43EEAC24B454FC00CFB126 /* Assets.xcassets */,
+				AF43EEB124B454FC00CFB126 /* LaunchScreen.storyboard */,
+				AF43EEB424B454FC00CFB126 /* Info.plist */,
+				AF43EEAE24B454FC00CFB126 /* Preview Content */,
+			);
+			path = HomeDoctor;
+			sourceTree = "<group>";
+		};
+		AF43EEAE24B454FC00CFB126 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AF43EEAF24B454FC00CFB126 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF5D757B24B5D046005F9E7B /* DoctorUI */ = {
+			isa = PBXGroup;
+			children = (
+				AF5D757F24B5DD74005F9E7B /* DoctorView.swift */,
+			);
+			path = DoctorUI;
+			sourceTree = "<group>";
+		};
+		AF5D757C24B5D054005F9E7B /* PatientUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PatientUI;
+			sourceTree = "<group>";
+		};
+		AFD2B9BB24B4AF8400018521 /* common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		AFD2B9BC24B4AF9000018521 /* users */ = {
+			isa = PBXGroup;
+			children = (
+				AF5D758124B61EFD005F9E7B /* UserModel.swift */,
+				AF43EEAA24B454F700CFB126 /* LoginView.swift */,
+				AF5D757924B5C514005F9E7B /* SplashView.swift */,
+			);
+			path = users;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF43EEA224B454F700CFB126 /* HomeDoctor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF43EEB724B454FC00CFB126 /* Build configuration list for PBXNativeTarget "HomeDoctor" */;
+			buildPhases = (
+				AF43EE9F24B454F700CFB126 /* Sources */,
+				AF43EEA024B454F700CFB126 /* Frameworks */,
+				AF43EEA124B454F700CFB126 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HomeDoctor;
+			productName = HomeDoctor;
+			productReference = AF43EEA324B454F700CFB126 /* HomeDoctor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF43EE9B24B454F700CFB126 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = Hillarie;
+				TargetAttributes = {
+					AF43EEA224B454F700CFB126 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = AF43EE9E24B454F700CFB126 /* Build configuration list for PBXProject "HomeDoctor" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF43EE9A24B454F700CFB126;
+			productRefGroup = AF43EEA424B454F700CFB126 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF43EEA224B454F700CFB126 /* HomeDoctor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF43EEA124B454F700CFB126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF43EEB324B454FC00CFB126 /* LaunchScreen.storyboard in Resources */,
+				AF43EEB024B454FC00CFB126 /* Preview Assets.xcassets in Resources */,
+				AF43EEAD24B454FC00CFB126 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF43EE9F24B454F700CFB126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF43EEA724B454F700CFB126 /* AppDelegate.swift in Sources */,
+				AF5D757A24B5C514005F9E7B /* SplashView.swift in Sources */,
+				AF5D758024B5DD74005F9E7B /* DoctorView.swift in Sources */,
+				AF43EEA924B454F700CFB126 /* SceneDelegate.swift in Sources */,
+				AF5D758224B61EFD005F9E7B /* UserModel.swift in Sources */,
+				AF43EEAB24B454F700CFB126 /* LoginView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AF43EEB124B454FC00CFB126 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF43EEB224B454FC00CFB126 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF43EEB524B454FC00CFB126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF43EEB624B454FC00CFB126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF43EEB824B454FC00CFB126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"HomeDoctor/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = HomeDoctor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.esquekenya.HomeDoctor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF43EEB924B454FC00CFB126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"HomeDoctor/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = HomeDoctor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.esquekenya.HomeDoctor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF43EE9E24B454F700CFB126 /* Build configuration list for PBXProject "HomeDoctor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF43EEB524B454FC00CFB126 /* Debug */,
+				AF43EEB624B454FC00CFB126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF43EEB724B454FC00CFB126 /* Build configuration list for PBXNativeTarget "HomeDoctor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF43EEB824B454FC00CFB126 /* Debug */,
+				AF43EEB924B454FC00CFB126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF43EE9B24B454F700CFB126 /* Project object */;
+}
