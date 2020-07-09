@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,10 @@
 		AF5D757A24B5C514005F9E7B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5D757924B5C514005F9E7B /* SplashView.swift */; };
 		AF5D758024B5DD74005F9E7B /* DoctorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5D757F24B5DD74005F9E7B /* DoctorView.swift */; };
 		AF5D758224B61EFD005F9E7B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5D758124B61EFD005F9E7B /* UserModel.swift */; };
+		AF5FED8324B7335A00E73F59 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AF5FED8224B7335A00E73F59 /* Alamofire */; };
+		AF5FED8B24B7386F00E73F59 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5FED8A24B7386F00E73F59 /* Constant.swift */; };
+		AF5FED8E24B7396800E73F59 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5FED8D24B7396800E73F59 /* UsersModel.swift */; };
+		AF5FED9124B73AEB00E73F59 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5FED9024B73AEB00E73F59 /* ApiManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,9 @@
 		AF5D757924B5C514005F9E7B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		AF5D757F24B5DD74005F9E7B /* DoctorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorView.swift; sourceTree = "<group>"; };
 		AF5D758124B61EFD005F9E7B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		AF5FED8A24B7386F00E73F59 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		AF5FED8D24B7396800E73F59 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
+		AF5FED9024B73AEB00E73F59 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF5FED8324B7335A00E73F59 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,7 +54,6 @@
 		AF43EE9A24B454F700CFB126 = {
 			isa = PBXGroup;
 			children = (
-				AFD2B9BB24B4AF8400018521 /* common */,
 				AF43EEA524B454F700CFB126 /* HomeDoctor */,
 				AF43EEA424B454F700CFB126 /* Products */,
 			);
@@ -63,6 +70,9 @@
 		AF43EEA524B454F700CFB126 /* HomeDoctor */ = {
 			isa = PBXGroup;
 			children = (
+				AF5FED8F24B739D800E73F59 /* ApiManager */,
+				AF5FED8C24B7394600E73F59 /* Model */,
+				AF5FED8924B7384D00E73F59 /* common */,
 				AF5D757C24B5D054005F9E7B /* PatientUI */,
 				AF5D757B24B5D046005F9E7B /* DoctorUI */,
 				AFD2B9BC24B4AF9000018521 /* users */,
@@ -99,11 +109,28 @@
 			path = PatientUI;
 			sourceTree = "<group>";
 		};
-		AFD2B9BB24B4AF8400018521 /* common */ = {
+		AF5FED8924B7384D00E73F59 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				AF5FED8A24B7386F00E73F59 /* Constant.swift */,
 			);
 			path = common;
+			sourceTree = "<group>";
+		};
+		AF5FED8C24B7394600E73F59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF5FED8D24B7396800E73F59 /* UsersModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF5FED8F24B739D800E73F59 /* ApiManager */ = {
+			isa = PBXGroup;
+			children = (
+				AF5FED9024B73AEB00E73F59 /* ApiManager.swift */,
+			);
+			path = ApiManager;
 			sourceTree = "<group>";
 		};
 		AFD2B9BC24B4AF9000018521 /* users */ = {
@@ -132,6 +159,9 @@
 			dependencies = (
 			);
 			name = HomeDoctor;
+			packageProductDependencies = (
+				AF5FED8224B7335A00E73F59 /* Alamofire */,
+			);
 			productName = HomeDoctor;
 			productReference = AF43EEA324B454F700CFB126 /* HomeDoctor.app */;
 			productType = "com.apple.product-type.application";
@@ -160,6 +190,9 @@
 				Base,
 			);
 			mainGroup = AF43EE9A24B454F700CFB126;
+			packageReferences = (
+				AF5FED8124B7335A00E73F59 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = AF43EEA424B454F700CFB126 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -187,7 +220,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF5FED8B24B7386F00E73F59 /* Constant.swift in Sources */,
+				AF5FED9124B73AEB00E73F59 /* ApiManager.swift in Sources */,
 				AF43EEA724B454F700CFB126 /* AppDelegate.swift in Sources */,
+				AF5FED8E24B7396800E73F59 /* UsersModel.swift in Sources */,
 				AF5D757A24B5C514005F9E7B /* SplashView.swift in Sources */,
 				AF5D758024B5DD74005F9E7B /* DoctorView.swift in Sources */,
 				AF43EEA924B454F700CFB126 /* SceneDelegate.swift in Sources */,
@@ -384,6 +420,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF5FED8124B7335A00E73F59 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF5FED8224B7335A00E73F59 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF5FED8124B7335A00E73F59 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF43EE9B24B454F700CFB126 /* Project object */;
 }

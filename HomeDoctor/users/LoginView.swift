@@ -17,15 +17,16 @@ class HttpAuth : ObservableObject {
         didchange.send(self)
         }
 }
-    func checkDetails(username: String, password: String){
+    func checkDetails(username: String, pass: String){
         guard let url = URL(string: "https://homedoctorapi.esquekenya.com/api/Users/Login")
             else { return }
-        let body:[String: String] = ["Email": username, "Password": password]
+        let body:[String: String] = ["Email": username, "Password": pass]
         let finalBody = try! JSONSerialization.data(withJSONObject: body)
+        //let finalBody = try! JSONSerialization.data(withJSONObject: body, options: [])
         var request  = URLRequest(url: url)
         request.httpMethod = "POST"
         request.httpBody=finalBody
-          request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+       // request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
          URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data else
@@ -35,12 +36,13 @@ class HttpAuth : ObservableObject {
             }
             let finalData = try! JSONDecoder().decode(UserModel.self, from: data)
 
-            print("Response",finalData)
+            debugPrint("Response",finalData)
             
             
             if (finalData.Success==true){
                 DispatchQueue.main.async{
                 self.authenticated=true
+              
                 }
             }
             
@@ -80,7 +82,7 @@ struct LoginView: View {
  
  struct ContentView_Previews: PreviewProvider {
      static var previews: some View {
-         LoginView()
+         SignUp()
      }
  }
  
@@ -184,9 +186,9 @@ struct LoginView: View {
  
  struct Login : View {
      
-     @State var mail = ""
-     @State var tdext = "Login"
-     @State var pass = ""
+     @State var mail = "0720968729"
+
+     @State var pass = "12345"
    @State var manager = HttpAuth()
      
      var body : some View{
@@ -213,7 +215,7 @@ struct LoginView: View {
                      .frame(width: 15, height: 18)
                      .foregroundColor(.black)
                      
-                     SecureField("Password", text: self.$pass)
+                     TextField("Password", text: self.$pass)
                      
                      Button(action: {
                          
@@ -234,30 +236,20 @@ struct LoginView: View {
              .padding(.top, 25)
              
          if manager.authenticated{
-               
-                
+     
+                                    
            }
              Button(action: {
-                self.manager.checkDetails(username : self.mail,password : self.pass)
+                self.manager.checkDetails(username : self.mail,pass : self.pass)
                              
              })
         {
                  // NavigationLink(destination: DoctorView()) {
-             if manager.authenticated{
-           Text("LOGIN")
-                                            .foregroundColor(.white)
-                                            .fontWeight(.bold)
-                                            .padding(.vertical)
-                                            .frame(width: UIScreen.main.bounds.width - 100)
-             
-             }else{
-                Text("LOGIddN")
-                                                .foregroundColor(.white)
-                                                .fontWeight(.bold)
-                                                .padding(.vertical)
-                                                .frame(width: UIScreen.main.bounds.width - 100)
-                    
-            }
+          Text("LOGIN")
+          .foregroundColor(.white)
+          .fontWeight(.bold)
+          .padding(.vertical)
+          .frame(width: UIScreen.main.bounds.width - 100)
                       //  }
             
              }.background(
@@ -274,9 +266,13 @@ struct LoginView: View {
  
  struct SignUp : View {
      
-     @State var mail = ""
-     @State var pass = ""
-     @State var repass = ""
+        @State var FirstName = ""
+        @State var LastName = ""
+        @State var Gender = ""
+        @State var PhoneNumber = ""
+        @State var Age = ""
+        @State var mail = ""
+       
      
      var body : some View{
          
@@ -285,15 +281,35 @@ struct LoginView: View {
              VStack{
                  
                  HStack(spacing: 15){
-                     
-                     Image(systemName: "envelope")
-                         .foregroundColor(.black)
-                     
-                     TextField("Enter Email Address", text: self.$mail)
-                     
-                 }.padding(.vertical, 20)
-                 
-                 Divider()
+                                                 
+                                                 Image(systemName: "envelope")
+                                                     .foregroundColor(.black)
+                                                 
+                    TextField("Enter First Name ", text: self.$FirstName)
+                                                 
+                                             }.padding(.vertical, 20)
+                            
+                             Divider()
+                HStack(spacing: 15){
+                                                
+                                                Image(systemName: "envelope")
+                                                    .foregroundColor(.black)
+                                                
+                                                TextField("Enter Last Name ", text: self.$LastName)
+                                                
+                                            }.padding(.vertical, 20)
+                           
+                            Divider()
+                HStack(spacing: 15){
+                                                
+                                                Image(systemName: "envelope")
+                                                    .foregroundColor(.black)
+                                                
+                                                TextField("Enter PhoneNumber ", text: self.$PhoneNumber)
+                                                
+                                            }.padding(.vertical, 20)
+                           
+                            Divider()
                  
                  HStack(spacing: 15){
                      
@@ -302,10 +318,11 @@ struct LoginView: View {
                      .frame(width: 15, height: 18)
                      .foregroundColor(.black)
                      
-                     SecureField("Password", text: self.$pass)
+                     TextField(" Age ", text: self.$Age)
                      
                      Button(action: {
-                         
+                       print("Delete tapped!")
+                
                      }) {
                          
                          Image(systemName: "eye")
@@ -323,7 +340,7 @@ struct LoginView: View {
                      .frame(width: 15, height: 18)
                      .foregroundColor(.black)
                      
-                     SecureField("Re-Enter", text: self.$repass)
+                     TextField("Re-Enter", text: self.$mail)
                      
                      Button(action: {
                          
